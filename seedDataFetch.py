@@ -1,5 +1,4 @@
-import requests, json
-import os.path
+import requests, json, os.path
 
 url = "https://s3-us-west-1.amazonaws.com/riot-developer-portal/seed-data/matches"
 endurl = ".json"
@@ -45,37 +44,3 @@ def GetRiotData(fileName):
     with open(fileName) as json_file:
         data = json.load(json_file)
         return data
-
-#
-#head = []
-#with open("result.json", "w") as outfile:
-#    for f in file_list:
-#        with open(f, 'rb') as infile:
-#            file_data = json.load(infile)
-#            head += file_data
-#    json.dump(head, outfile)
-
-
-
-#def CombineFiles():
-#    for x in range(1,11):
-#        listOfFileNames[x] = baseFilename + str(x) + '.txt'
-#    for fileName in listOfFileNames:
-#        with open(fileName, 'rb') as inputFile:
-#            allDataFiles += json.load(inputFile)
-#
-#
-#def LoadRiotDataFromFile():
-#
-#    with open('json_data\json1.txt') as json_file:
-#        data = json.load(json_file)
-#
-#
-            
-
-#with open("AllData.json", "w") as outfile:
-#    for f in listOfFileNames:
-#        with open(f, 'rb') as infile:
-#            file_data = json.load(infile)
-#            allDataFiles += file_data
-#    json.dump(allDataFiles, outfile)
